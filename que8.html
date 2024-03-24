@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Important Message Marquee</title>
+<style>
+    .marquee {
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        position: relative;
+        animation: marquee 1s linear infinite;
+    }
+    
+    .marquee span {
+        display: inline-block;
+        padding-right: 100%;
+        animation: marqueeText 1s linear infinite;
+    }
+    
+    @keyframes marquee {
+        0% { transform: translateX(100%); }
+        100% { transform: translateX(-100%); }
+    }
+    
+    @keyframes marqueeText {
+        0%, 49.99% { color: red; }
+        50%, 100% { color: orange; }
+    }
+</style>
+</head>
+<body>
+<div class="marquee">
+    <span>Education Makes People Easy To Lead But Difficult To Drive</span>
+</div>
+</body>
+</html>
